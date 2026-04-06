@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 import cors from 'cors';
 import connectDB from './db.js';
 import feedbackRoutes from './routes/feedback.routes';
+import authRoutes from './routes/auth.routes';
 
 dotenv.config();
 connectDB();
@@ -22,3 +23,5 @@ app.listen(PORT, () => {
 });
 
 app.use('/api/feedback', feedbackRoutes);
+app.use('/api/feedback', feedbackRoutes);
+app.use('/api/auth', authRoutes);
